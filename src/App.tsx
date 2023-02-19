@@ -1,16 +1,6 @@
-import React, {CSSProperties} from 'react';
+import React from 'react';
 import './App.css';
 import Chart from "./Chart";
-
-
-// const style: CSSProperties = {
-//     width: "191px",
-//     height: "189px",
-//     borderRadius: "4px",
-//     display: "flex",
-//     justifyContent: "space-around",
-//     flexDirection: "column",
-// }
 
 function App() {
     return (
