@@ -24,6 +24,7 @@ const color = ["#56B9F2",
 
 const valueFormatter = (value: number) => (value + ' шт.');
 
+
 const formatter = (params: MultipleTooltipFormatterParams) => {
     let projectsValue: number[] = [];
     let projectIn: ParamType[] = [];
@@ -141,17 +142,27 @@ function Chart() {
         },
         xAxis: {
             data: periods,
+            splitLine: { show: false },
             axisTick: {
                 show: false
             },
             axisLine: {
                 lineStyle: {
-                    color: "rgba(3,3,3,0.57)"
+                    color: "rgba(0,32,51,0.6)"
                 }
 
             }
         },
-        yAxis: {},
+        yAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: "rgba(0,32,51,0.6)"
+                }
+            },
+            axisTick: {
+                show: true
+            },
+        },
         series: [
             {
                 name: names[0],
@@ -162,6 +173,8 @@ function Chart() {
                     show: true,
                     position: 'top',
                 },
+                barMinWidth: "30%",
+                barMaxWidth: "60%"
             },
             {
                 name: names[1],
@@ -172,6 +185,8 @@ function Chart() {
                     show: true,
                     position: 'top',
                 },
+                barMinWidth: "30%",
+                barMaxWidth: "60%"
             },
             {
                 name: names[2],
@@ -182,6 +197,8 @@ function Chart() {
                     show: true,
                     position: 'top',
                 },
+                barMinWidth: "30%",
+                barMaxWidth: "60%"
             },
             {
                 name: names[3],
@@ -192,9 +209,11 @@ function Chart() {
                     show: true,
                     position: 'top',
                 },
+                barMinWidth: "30%",
+                barMaxWidth: "60%"
             }
         ],
-        color
+        color,
     }
 
     return (
